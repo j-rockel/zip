@@ -92,6 +92,8 @@ library
     if !flag(disable-zstd)
         cpp-options: -DENABLE_ZSTD
 
+        build-depends: unix <2.8
+
 executable haskell-zip-app
     main-is:          Main.hs
     hs-source-dirs:   bench-app
