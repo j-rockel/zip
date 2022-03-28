@@ -1096,7 +1096,7 @@ toVersion x = makeVersion [major, minor]
 -- | Covert 'Version' to its numeric representation as per the .ZIP
 -- specification.
 fromVersion :: Version -> Word16
-fromVersion v = fromIntegral ((ZIP_OS `shiftL` 8) .|. (major * 10 + minor))
+fromVersion v = fromIntegral (major * 10 + minor)
   where
     (major, minor) =
       case versionBranch v of
